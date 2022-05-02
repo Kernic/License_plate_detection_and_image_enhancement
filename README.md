@@ -1,7 +1,7 @@
 # License plate detection and image enhancement
 <p align="center">
-    ![alt text](https://github.com/Kernic/License_plate_detection_and_image_enhancement/blob/main/school_logo.jpg?raw=true)
-    Project created for a school project, made by <a href='https://github.com/Kernic'>Corentin Le Gall and <a href='https://github.com/acadet22'>Alexandre Cadet</a>
+    <img src='https://github.com/Kernic/License_plate_detection_and_image_enhancement/blob/main/school_logo.jpg?raw=true'>
+    Project created for a school project, made by <a href='https://github.com/Kernic'>Corentin Le Gall</a> and <a href='https://github.com/acadet22'>Alexandre Cadet</a>
 </p>
 ## Introduction :
 
