@@ -22,6 +22,11 @@ The <a href='https://github.com/Kernic/License_plate_detection_and_image_enhance
 
 Next we used the <a href='https://github.com/ultralytics/yolov5'>Yolo V.5 github project</a> and trained the yolov5l on our data, optaining up to 98.11% of precision (details <a href='https://wandb.ai/kernic/train/runs/2f8ncml1?workspace=user-kernic'>here</a>)
 
+<p align="center">
+    <img src='https://github.com/Kernic/License_plate_detection_and_image_enhancement/blob/main/weights/Yolov5/infos/P_curve.png?raw=true' width='400' height='300'>
+    <img src='https://github.com/Kernic/License_plate_detection_and_image_enhancement/blob/main/weights/Yolov5/infos/confusion_matrix.png?raw=true' width='400' height='300'>
+</p>
+
 ## 2. Image enhancement
 
 None
