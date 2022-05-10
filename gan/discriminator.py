@@ -60,6 +60,9 @@ def discriminator_loss(disc_real_output, disc_generated_output):
 
 	return total_disc_loss
 
-if __name__ == '__main__':
+def discriminator_describe():
 	discriminator = Discriminator()
-	tf.keras.utils.plot_model(discriminator, show_shapes=True, dpi=64, to_file='./discriminator.png')
+	tf.keras.utils.plot_model(discriminator, show_shapes=True, dpi=64, to_file='./info/discriminator.png')
+
+if __name__ == '__main__':
+	discriminator_describe()

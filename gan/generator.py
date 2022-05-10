@@ -82,12 +82,17 @@ def generator_loss(disc_generated_output, gen_output, target):
 
 	return total_gen_loss, gan_loss, l1_loss
 
-if __name__ == "__main__":
-
-	inp, re = load('./test.jpeg')
+def generator_describe():
 	generator = Generator()
-	tf.keras.utils.plot_model(generator, show_shapes=True, dpi=64, to_file='./generator.png')
-	
-	gen_output = generator(inp[tf.newaxis, ...], training=False)
-	plt.imshow(gen_output[0, ...])
-	plt.show()
+	tf.keras.utils.plot_model(generator, show_shapes=True, dpi=64, to_file='./info/generator.png')
+
+if __name__ == "__main__":
+	describe = True
+	if describe:
+		generator_describe()
+	else:
+		inp, re = load('./test.jpeg')
+		
+		gen_output = generator(inp[tf.newaxis, ...], training=False)
+		plt.imshow(gen_output[0, ...])
+		plt.show()
