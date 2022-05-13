@@ -88,3 +88,4 @@ def generate_images(model, test_input, tar):
 
 generator_optimizer = tf.keras.optimizers.Adam(2e-4, beta_1=0.5)
 discriminator_optimizer = tf.keras.optimizers.Adam(2e-4, beta_1=0.5)
+loss_object = tf.keras.losses.BinaryCrossentropy(from_logits=True)

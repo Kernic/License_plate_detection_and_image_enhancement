@@ -50,7 +50,8 @@ def Generator():
 	)
 
 	x = layers.Resizing(256, 256)(inputs)
-
+	#x = inputs
+	
 	# Downsampling through the model
 	skips = []
 	for down in down_stack:
@@ -63,8 +64,6 @@ def Generator():
 	for up, skip in zip(up_stack, skips):
 		x = up(x)
 		x = tf.keras.layers.Concatenate()([x, skip])
-	
-	x = upsample(64, 4)(x)
 	
 	x = last(x)
 

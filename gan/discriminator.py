@@ -17,8 +17,8 @@ from common import *
 def Discriminator():
 	initializer = tf.random_normal_initializer(0., 0.02)
 
-	inp = tf.keras.layers.Input(shape=[512, 512, 3], name='input_image')
-	tar = tf.keras.layers.Input(shape=[512, 512, 3], name='target_image')
+	inp = tf.keras.layers.Input(shape=[None, None, 3], name='input_image')
+	tar = tf.keras.layers.Input(shape=[None, None, 3], name='target_image')
 
 	x = tf.keras.layers.concatenate([inp, tar])  # (batch_size, 512, 512, channels*2)
 	
