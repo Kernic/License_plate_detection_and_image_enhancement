@@ -31,7 +31,7 @@ def compress_images(directory=False, quality=10):
 		
 		
         # 5. Compress every image and save it with a new name:
-        img.save(r"../compressed/"+image, optimize=True, quality=10)
+        img.save(r"../compressed/"+image, optimize=True, quality=5)
 
 def resize_img(path):
 	for file in os.listdir(path):
