@@ -54,8 +54,8 @@ def downsample(filters, size, apply_batchnorm=True):
 	
 def upsample(filters, size, apply_dropout=False):
 	initializer = tf.random_normal_initializer(0., 0.02)
-  	result = tf.keras.Sequential()
-  	result.add(
+	result = tf.keras.Sequential()
+	result.add(
 		tf.keras.layers.Conv2DTranspose(
 			filters, 
 			size, 
@@ -66,14 +66,14 @@ def upsample(filters, size, apply_dropout=False):
 		)
 	)
 	
-  	result.add(tf.keras.layers.BatchNormalization())
+	result.add(tf.keras.layers.BatchNormalization())
 	
-  	if apply_dropout:
+	if apply_dropout:
 		result.add(tf.keras.layers.Dropout(0.5))
 
-  	result.add(tf.keras.layers.ReLU())
+	result.add(tf.keras.layers.ReLU())
 
-  	return result
+	return result
 
 def generate_images(model, test_input, tar):
 	prediction = model(test_input, training=True)
@@ -96,4 +96,5 @@ LAMBDA = 100
 generator_optimizer = tf.keras.optimizers.Adam(2e-4, beta_1=0.5)
 discriminator_optimizer = tf.keras.optimizers.Adam(2e-4, beta_1=0.5)
 loss_object = tf.keras.losses.BinaryCrossentropy(from_logits=True)
+
 
