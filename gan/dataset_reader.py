@@ -10,14 +10,14 @@ def load(image_file):
 	w = tf.shape(image)[1]
 	w = w // 2
 	
-	input_image = image[:, :w, :]
+	input_image = image[:, :w, :] / 255
 	shape = tf.shape(input_image)
-	real_image = image[:, w:, :]
+	real_image = image[:, w:, :]  / 255
 	
 	input_image = tf.cast(input_image, tf.float32)
 	real_image = tf.cast(real_image, tf.float32)
 	
-	return input_image, real_image
+	return real_image, input_image
 	
 if __name__ == "__main__":
 	PATH = r"../dataset/modified pix2pix/"
