@@ -47,10 +47,10 @@ def resize_img(path):
 
         img.save(path+file)
         im_flip.save(path+name+"_flip."+ext)
-        im_flip.save(path+name+"_mirror."+ext)
+        im_mirror.save(path+name+"_mirror."+ext)
 		
 if __name__ == "__main__":
 	for folder in os.listdir(r"/home/kernic/ISEN/License_plate_detection_and_image_enhancement/dataset/modified pix2pix"):
 		PATH = fr"/home/kernic/ISEN/License_plate_detection_and_image_enhancement/dataset/modified pix2pix/{folder}/original/"
-		#resize_img(PATH)
+		resize_img(PATH)
 		compress_images(PATH)
