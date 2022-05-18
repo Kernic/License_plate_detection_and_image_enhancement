@@ -28,7 +28,7 @@ def load(image_file):
 	input_image = tf.cast(input_image, tf.float32)
 	real_image = tf.cast(real_image, tf.float32)
 
-	return input_image, real_image
+	return real_image, input_image
 
 def downsample(filters, size, apply_batchnorm=True):
 	initializer = tf.random_normal_initializer(0., 0.02)
