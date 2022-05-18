@@ -17,7 +17,7 @@ def load(image_file):
 	input_image = tf.cast(input_image, tf.float32)
 	real_image = tf.cast(real_image, tf.float32)
 	
-	return real_image, input_image
+	return input_image, real_image
 	
 if __name__ == "__main__":
 	PATH = r"../dataset/modified pix2pix/"

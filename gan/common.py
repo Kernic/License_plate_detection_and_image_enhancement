@@ -21,14 +21,14 @@ def load(image_file):
 	# - one with an architecture label image 
 	w = tf.shape(image)[1]
 	w = w // 2
-	input_image = image[:, w:, :]
-	real_image = image[:, :w, :]
+	input_image = image[:, w:, :] /255
+	real_image = image[:, :w, :] /255
 
 	# Convert both images to float32 tensors
 	input_image = tf.cast(input_image, tf.float32)
 	real_image = tf.cast(real_image, tf.float32)
 
-	return real_image, input_image
+	return input_image, real_image
 
 def downsample(filters, size, apply_batchnorm=True):
 	initializer = tf.random_normal_initializer(0., 0.02)

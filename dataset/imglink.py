@@ -25,5 +25,5 @@ def savelinkedimg(path):
 	
 
 if __name__ == "__main__":
-	for folder in listdir(r"./modified pix2pix/"):
-		savelinkedimg(fr"./modified pix2pix/{folder}/")
+	for folder in listdir(r"/home/kernic/ISEN/License_plate_detection_and_image_enhancement/dataset/modified pix2pix/"):
+		savelinkedimg(fr"/home/kernic/ISEN/License_plate_detection_and_image_enhancement/dataset/modified pix2pix/{folder}/")
