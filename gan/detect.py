@@ -23,11 +23,7 @@ def genimage(model, test_input):
     genimg = model(test_input, training=True)
     
     files = os.listdir(r"./info/trainingImages/")
-    plt.subplot(1, 2, 1)
-    plt.imshow(genimg[0])
-    plt.subplot(1, 2, 2)
-    plt.imshow(test_input[0])
-    plt.savefig(fr"./info/trainingImages/{len(files)}.png")
+    plt.imsave(fr"./info/trainingImages/{len(files)}.png", genimg[0])
 
 
 def detectionTest():
