@@ -22,8 +22,11 @@ def genimage(model, test_input):
 
     genimg = model(test_input, training=True)
     
+    img = Image.fremaray(genim[0], 'RGB')
+    
     files = os.listdir(r"./info/trainingImages/")
-    plt.imsave(fr"./info/trainingImages/{len(files)}.png", genimg[0])
+    
+    img.save(fr"./info/trainingImages/{len(files)}.png")
 
 
 def detectionTest():
