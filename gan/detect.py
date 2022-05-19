@@ -22,11 +22,11 @@ def genimage(model, test_input):
 
     genimg = model(test_input, training=True)
     
-    img = Image.fromarray(genimg[0], 'RGB')
+    img = plt.imshow(genimg[0])
+    plt.axis('off')
     
     files = os.listdir(r"./info/trainingImages/")
-    
-    img.save(fr"./info/trainingImages/{len(files)}.png")
+    plt.savefig(fr"./info/trainingImages/{len(files)}.png" , bbox_inches='tight')
 
 
 def detectionTest():
