@@ -23,15 +23,15 @@ def genimage(model, test_input):
     genimg = model(test_input, training=True)
     
     files = os.listdir(r"./info/trainingImages/")
-    #plt.subplot(1, 2, 1)
+    plt.subplot(1, 2, 1)
     plt.imshow(genimg[0])
-    #plt.subplot(1, 2, 2)
-    #plt.imshow(test_input[0])
-    plt.imsave(fr"./info/trainingImages/{len(files)}.png")
+    plt.subplot(1, 2, 2)
+    plt.imshow(test_input[0])
+    plt.savefig(fr"./info/trainingImages/{len(files)}.png")
 
 
 def detectionTest():
-    PATH = r"/home/kernic/ISEN/detect/exp/crops/licence/"
+    PATH = r"detect/"
     detect_dataset = tf.data.Dataset.list_files(PATH+"*.jpg")
     detect_dataset = detect_dataset.map(detectionLoad, num_parallel_calls=tf.data.AUTOTUNE)
     detect_dataset = detect_dataset.shuffle(400)
@@ -41,7 +41,7 @@ def detectionTest():
         genimage(generator, inp)
     
 def images_resize():
-    PATH = r"/home/kernic/ISEN/detect/exp/crops/licence/"
+    PATH = r"detect/"
     for file in os.listdir(PATH):
         img = Image.open(PATH+file)
         shape = img.size
