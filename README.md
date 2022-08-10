@@ -27,10 +27,6 @@ Next, we used the <a href='https://github.com/ultralytics/yolov5'>Yolo V.5 ultra
     <img src='https://github.com/Kernic/License_plate_detection_and_image_enhancement/blob/main/weights/Yolov5/infos/confusion_matrix.png?raw=true' width='400' height='300'>
 </p>
 
-## 2. Image enhancement
+## 2. Image enhancement And License plate reading and writing as text
+https://colab.research.google.com/drive/1MMc7bYWeRCXqMK5Ztmmi-cLH_8PwnXA2
 
-None
-
-## 3. License plate reading and writing as text
-
-None
